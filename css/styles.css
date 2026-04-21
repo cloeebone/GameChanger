@@ -1,0 +1,269 @@
+
+
+* {
+  box-sizing: border-box; /* Critical for responsive widths */
+}
+
+body, header, nav, main, footer, img, h1, h2, h3, ul, aside, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- 2. BASE MOBILE STYLES (Default) --- */
+body {
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4; /* Clean background */
+}
+
+header, main, footer {
+  padding: 1.5em;
+  max-width: 100%; /* Full width on mobile */
+  margin: auto;
+  background: #fff;
+}
+
+/* Header & H1 logic */
+header {
+  background-color: #004E98;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+
+.logo{
+  font-family: Jaro, 'Arial Bold', sans-serif;
+  color: #FF6700;
+  font-size: 5em;
+  margin-top: 0;
+  padding-top: 0;
+  text-decoration: none;
+}
+
+h2 { 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em; 
+  color: #001f3f;
+  border-bottom: 2px solid #3182ce; 
+  padding-bottom: 0.3em;
+  margin-top: 1.2em;
+}
+
+img {
+  max-width: 100%; 
+  height: auto;
+  display: block;
+}
+
+
+
+/* --- 3. MOBILE NAVIGATION --- */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+nav {
+  display: none; /* Toggleable on mobile */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #004E98;
+  flex-direction: column;
+  z-index: 10;
+}
+
+nav a {
+  display: block;
+  color:#3BB273;
+  text-decoration: none;
+  padding: 1em;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+#menu-toggle:checked ~ nav {
+  display: flex;
+}
+
+/* Helper Classes */
+.mobile { display: block; }
+.tab-desk, .desktop { display: none; }
+
+/* --- 4. TABLES & FORMS --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  display: block; 
+  overflow-x: auto; /* Swipe to see more on small phones */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.8em;
+  text-align: left;
+}
+
+button {
+  background-color: #ed8936;
+  color: white;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.grid-container {
+    display: block;
+    margin: 5em;
+    margin-top: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    place-items: center;
+    text-align: center;
+    padding-top: 2em;
+}
+.grid img {
+    border-radius: 25%;
+    max-width: 100%;
+}
+.volunteer {
+    display: block;
+}
+.volunteer table {
+    width: 100%;
+    float: none;
+}
+.volunteer img{
+    max-width: 80%;
+    margin: auto;
+}
+
+.contact-hero{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.contact-hero img {
+  width: 100%;
+  height: 18.75em;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.media-gallery img{
+  max-width: 30%;
+  align-items: center;
+}
+
+video {
+  max-width: 80%;
+}
+
+
+/* --- 5. VIEWPORT: TABLET (620px+) --- */
+@media screen and (min-width: 620px) {
+  header, main, footer {
+    max-width: 1000px;
+  }
+  
+  .tab-desk { display: block; }
+  
+  .volunteer {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .volunteer table, .volunteer img {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  table {
+    display: table; /* Back to normal layout */
+  }
+}
+
+/* --- 6. VIEWPORT: DESKTOP (1000px+) --- */
+@media screen and (min-width: 1000px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    background: transparent;
+  }
+
+  nav a {
+    border: none;
+    padding: 0 0 0 1.5em;
+  }
+
+  header {
+    background: #004E98;
+  }
+
+
+  .desktop { display: block; }
+
+  .grid, .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* --- 7. VIEWPORT: LARGE DESKTOP (1921px+) --- */
+@media screen and (min-width: 1921px) {
+  header, main, footer {
+    max-width: 1600px;
+  }
+
+  header h1 { font-size: 4em; }
+
+  .grid, .programs-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- 8. PRINT --- */
+@media print {
+  header, main, footer { background: white; color: black; }
+  nav, .hamburger, button { display: none !important; }
+}
