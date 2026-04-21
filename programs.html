@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game changers: Our programs </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Jaro:opsz@6..72&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="manifest" href="images/site.webmanifest" /> 
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .programs-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .program-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .program-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .program-card h3 {
+            font-size: 1.5rem;
+            margin: 1rem 1rem 0.5rem;
+            color: #1a4d2c;
+        }
+        .program-card p {
+            margin: 0 1rem 1rem;
+            color: #444;
+            line-height: 1.4;
+        }
+        .learn-more-btn {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            margin: 0 1rem 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .learn-more-btn:hover {
+            background-color: #e07c00;
+        }
+        .program-detail {
+            background-color: #f0f7f0;
+            margin: 0 1rem 1rem;
+            padding: 1rem;
+            border-radius: 12px;
+            border-left: 4px solid #ff8c00;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .programs-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">
+      <strong>Game Changers</strong>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <nav id="primary-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="programs.html">Our Programs</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="support.html">Support Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+    <section class="programs-section">
+        <h1 class="page-title">Our Programs</h1>
+        <p class="section-subtitle">Empowering youth through sports, education, and leadership</p>
+
+        <div class="programs-grid">
+            <!-- Program 1 -->
+            <div class="program-card">
+                <img src="https://img.freepik.com/premium-photo/group-teenagers-playing-basketball-outdoor-court_501072-3581.jpg" alt="Youth basketball">
+                <h3>Youth Sports League</h3>
+                <p>Ages 6-18. Learn teamwork, discipline, and athletic skills through soccer, basketball, and baseball.</p>
+                <button class="learn-more-btn" onclick="toggleProgram(1)">Learn More</button>
+                <div id="program-detail-1" class="program-detail hidden">
+                    <p><strong>Season:</strong> Spring & Fall (8 weeks each)</p>
+                    <p><strong>Locations:</strong> 5 community centers across the city</p>
+                    <p><strong>Includes:</strong> Uniform, equipment, and certified coaches</p>
+                    <p><strong>Cost:</strong> Free for families in need (sponsored by donors)</p>
+                </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1557425955-df376b5903c8?w=400" alt="Leadership workshop">
+                <h3>Leadership Academy</h3>
+                <p>Weekly workshops and summer camps focused on public speaking, conflict resolution, and team building.</p>
+                <button class="learn-more-btn" onclick="toggleProgram(2)">Learn More</button>
+                <div id="program-detail-2" class="program-detail hidden">
+                    <p><strong>Duration:</strong> 12-week program + 1-week summer intensive</p>
+                    <p><strong>Topics:</strong> Communication, problem-solving, goal setting, mentoring</p>
+                    <p><strong>Certification:</strong> Leadership certificate upon completion</p>
+                </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400" alt="Mentorship">
+                <h3>Mentorship Program</h3>
+                <p>One-on-one mentoring with local professionals, college students, and community leaders.</p>
+                <button class="learn-more-btn" onclick="toggleProgram(3)">Learn More</button>
+                <div id="program-detail-3" class="program-detail hidden">
+                    <p><strong>Commitment:</strong> 2 hours per week for 6 months</p>
+                    <p><strong>Activities:</strong> Career exploration, homework help, life skills</p>
+                    <p><strong>Benefits:</strong> Scholarship opportunities and college prep</p>
+                </div>
+            </div>
+
+            <!-- Program 4 -->
+            <div class="program-card">
+                <img src="https://images.pexels.com/photos/6646869/pexels-photo-6646869.jpeg?w=400" alt="Community outreach">
+                <h3>Community Outreach</h3>
+                <p>Volunteer opportunities, food drives, and neighborhood clean-up events for youth and families.</p>
+                <button class="learn-more-btn" onclick="toggleProgram(4)">Learn More</button>
+                <div id="program-detail-4" class="program-detail hidden">
+                    <p><strong>Events:</strong> Monthly volunteer days, holiday giving, park restoration</p>
+                    <p><strong>Impact:</strong> Over 5,000 community members served annually</p>
+                    <p><strong>Recognition:</strong> Presidential Volunteer Service Award eligible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="scripts/script.js"></script>
+<footer>
+    <hr>
+    <p><strong>Game Changers</strong> – breaking barriers, building champions. Because every kid deserves the joy of sport.</p>
+    
+    <p>
+      <strong>Follow our impact:</strong><br>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
+      <a href="https://www.x.com" target="_blank">X (Twitter)</a> | 
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </p>
+
+    <p>
+      <a href="#privacy">Privacy Policy</a> | 
+      <a href="#terms">Terms of Use</a> | 
+      <a href="#accessibility">Accessibility</a> | 
+      <a href="home.html">Home</a>
+    </p>
+    <p>© 2026 Game Changers Foundation – Nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law.</p>
+</footer>
+
+
+
+</body>
+</html>

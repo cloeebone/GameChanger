@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Game changers: Contact Us </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Jaro:opsz@6..72&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <header>
+  <div class="nav-container">
+    <div class="logo">
+      <strong>Game Changers</strong>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <nav id="primary-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="programs.html">Our Programs</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="support.html">Support Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+
+    <section>
+      <img src="images/contact-banner.jpg" alt="Kids enjoying sports programs">
+      <div class="hero-text">
+   
+      </div>
+  </section>
+
+
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Send us a message</h2>
+      <form action="#" method="post" id="contact-form">
+
+        <!-- Fieldset 1: Personal Information -->
+        <fieldset>
+          <legend><strong>Your information</strong></legend>
+          
+          <label for="fullname">Full name *</label><br>
+          <input type="text" id="fullname" name="fullname" required placeholder="First and last name" size="40"><br><br>
+
+          <label for="email">Email address *</label><br>
+          <input type="email" id="email" name="email" required placeholder="name@example.com" size="40"><br><br>
+
+          <label for="phone">Phone number</label><br>
+          <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" size="40"><br><br>
+
+          <label for="organization">Organization / School (optional)</label><br>
+          <input type="text" id="organization" name="organization" placeholder="e.g., local sports club, school, company" size="40"><br><br>
+
+          <label for="contact-preference">Preferred contact method</label><br>
+          <select id="contact-preference" name="contact-preference">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="either">Either</option>
+          </select><br><br>
+        </fieldset>
+
+        <!-- Fieldset 2: Message & Additional Details -->
+        <fieldset>
+          <legend><strong>Your message</strong></legend>
+          
+          <label for="subject">Subject *</label><br>
+          <input type="text" id="subject" name="subject" required placeholder="e.g., Volunteer inquiry, sponsorship, general question" size="50"><br><br>
+
+          <label for="message">Message *</label><br>
+          <textarea id="message" name="message" rows="5" cols="50" required placeholder="Please provide details..."></textarea><br><br>
+
+          <label for="hear-about">How did you hear about us?</label><br>
+          <select id="hear-about" name="hear-about">
+            <option value="social">Social media</option>
+            <option value="search">Search engine</option>
+            <option value="friend">Friend or family</option>
+            <option value="event">Community event</option>
+            <option value="other">Other</option>
+          </select><br><br>
+
+          <label>Inquiry type *</label><br>
+          <label>
+            <input type="radio" name="inquiry-type" value="general" checked> General question
+          </label><br>
+          <label>
+            <input type="radio" name="inquiry-type" value="volunteer"> Volunteer opportunities
+          </label><br>
+          <label>
+            <input type="radio" name="inquiry-type" value="sponsorship"> Sponsorship or donation
+          </label><br>
+          <label>
+            <input type="radio" name="inquiry-type" value="partnership"> Partnership / corporate
+          </label><br><br>
+
+          <label for="best-time">Best time to reach you (optional)</label><br>
+          <input type="text" id="best-time" name="best-time" placeholder="e.g., weekday mornings, after 3pm" size="40"><br><br>
+
+          <label>
+            <input type="checkbox" name="newsletter" value="yes"> Sign me up for the Game Changers newsletter (impact stories and updates)
+          </label><br><br>
+        </fieldset>
+
+        <button type="button" onclick="alert('Thank you for contacting Game Changers! Your message has been sent (demo). A real form would submit to our team. We will reply within 2 business days.')">
+          Send message
+        </button>
+        <p><small>We respect your privacy. Your information will never be shared.</small></p>
+      </form>
+    </section>
+
+
+    <section aria-labelledby="direct-contact">
+      <h2 id="direct-contact">Other ways to reach us</h2>
+      <address>
+        <strong>Game Changers Headquarters</strong><br>
+        800W 200 N<br>
+        Cedar city, UT 84720, USA<br>
+        Email: <a href="mailto:hello@gamechangers.org">hello@gamechangers.org</a><br>
+        Phone: +1 (435) 010 1444<br>
+      </address>
+      <p><strong>Media & press inquiries:</strong> <a href="mailto:press@gamechangers.org">press@gamechangers.org</a></p>
+      <p><strong>Sponsorship & corporate partnerships:</strong> <a href="mailto:partners@gamechangers.org">partners@gamechangers.org</a></p>
+    </section>
+
+  </main>
+
+<footer>
+    <hr>
+    <p><strong>Game Changers</strong> – breaking barriers, building champions. Because every kid deserves the joy of sport.</p>
+    
+    <p>
+      <strong>Follow our impact:</strong><br>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> | 
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
+      <a href="https://www.x.com" target="_blank">X (Twitter)</a> | 
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </p>
+
+    <p>
+      <a href="#privacy">Privacy Policy</a> | 
+      <a href="#terms">Terms of Use</a> | 
+      <a href="#accessibility">Accessibility</a> | 
+      <a href="home.html">Home</a>
+    </p>
+    <p>© 2026 Game Changers Foundation – Nonprofit organization. All donations are tax-deductible to the fullest extent allowed by law.</p>
+</footer>
+
+</body>
+</html>
